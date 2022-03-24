@@ -20,13 +20,7 @@ class Account
 };
 
 //constructor
-Account::Account(double rate, double bal)
-{
-    interestRate = rate;
-    balance = bal;
-    interest = 0;
-    numOfTransactions = 0;
-}; //: interestRate(rate), balance(bal), interest(0), numOfTransactions(0) {};
+Account::Account(double rate, double bal) : interestRate(rate), balance(bal), interest(0), numOfTransactions(0) {};
 
 void Account::makeDeposit(double amt) 
 {
