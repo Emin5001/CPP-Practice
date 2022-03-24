@@ -50,6 +50,10 @@ int main()
     return 0;
 };
 
+/*
+Method that displays the overall menu that will be 
+repeated after every single user input
+*/
 void displayMenu()
 {
     cout << "\n\n            MENU\n\n";
@@ -63,6 +67,10 @@ void displayMenu()
     cout << "Enter your choice: ";
 }
 
+/*
+Gets the menu input choice from the user every single time
+that they DONT pick the max variable (in this case, 7)
+*/
 char getChoice(char max)
 {
     char choice = cin.get();
@@ -78,6 +86,9 @@ char getChoice(char max)
     return choice;
 };
 
+/*
+Method to make a deposit on the passed Account reference variable
+*/
 void makeDeposit(Account& acct)
 {   
     double depositAmt; 
@@ -89,6 +100,12 @@ void makeDeposit(Account& acct)
     acct.makeDeposit(depositAmt);
 };
 
+/*
+Method to withdraw a certain amount of money from the 
+passed Account reference variable.
+Validates if the user has enough money to withdraw, if they don't,
+output an error and do nothing. 
+*/
 void withdraw(Account& acct)
 {
     double withdrawAmt;
